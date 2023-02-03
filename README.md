@@ -17,6 +17,12 @@ There appears to be a condition where, after running for some time, an ACA-py me
 - [RFC 0046 - Mediators](https://github.com/hyperledger/aries-rfcs/tree/main/concepts/0046-mediators-and-relays)
 - [RFC 0060 - Conneciton](https://github.com/hyperledger/aries-rfcs/blob/main/features/0160-connection-protocol/README.md)
 
+### Demonstration
+
+In [this](./faber-local-ok.mov) video I use a similar script to the one attached to demostrate that waiting for the conneciton to be "complete" as shown by the two messages in the Faber terminal will create a successful offer in the script shown in VSCode (on the right)
+
+In [this](./faber-local-fail.mov) video I use a similar script to the one attached to demostrate that sending an offer when the conneciton is in "request-sent", before it reaces a completed state, causes the offer to now show up in the script shown in VSCode (on the right)
+
 # Steps to Reproduce
 
 ### Setup
