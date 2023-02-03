@@ -1,0 +1,10 @@
+{
+  "image": "jasoncleach/aries-framework-javascript:latest",
+  "runArgs": [
+    "--env-file",
+    ".devcontainer/devcontainer.env"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/work,type=bind",
+  "workspaceFolder": "/work",
+  "remoteUser": "vscode"
+}
