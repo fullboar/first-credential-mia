@@ -15,7 +15,7 @@ There appears to be a condition where, after running for some time, an ACA-py me
 
 - [RFC 0005 - DID Communication](https://github.com/hyperledger/aries-rfcs/blob/main/concepts/0005-didcomm/README.md)
 - [RFC 0046 - Mediators](https://github.com/hyperledger/aries-rfcs/tree/main/concepts/0046-mediators-and-relays)
-
+- [RFC 0060 - Conneciton](https://github.com/hyperledger/aries-rfcs/blob/main/features/0160-connection-protocol/README.md)
 
 # Steps to Reproduce
 
@@ -153,6 +153,7 @@ In one test we used an ACA-py 0.7.3 mediator on a cloud platform which had been 
 Unlikley. The situation can be reproduced using the [BC Showcase](https://digital.gov.bc.ca/digital-trust/showcase/) demo. By using the older mediator mentiond in #4 above the automated showcase demo fails. By using the fresh mediator from #4 above the demo succeeds.
 
 6. What conneciotn protocol is being used?
+
 V1. 
 
 7. Is this a bug?
