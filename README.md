@@ -11,7 +11,13 @@ There appears to be a condition where, after running for some time, an ACA-py me
 
  This appears to be a race condition where the mediator performance slows just enough (on cloud infrastructure) to allow the above mentiond scenario to serface. It can be reproduced using a local mediator by, as the description notes, sending an offer quickly befor a connection state reaches the "completed" state.
 
- # Steps to Reproduce
+### References
+
+- [RFC 0005 - DID Communication](https://github.com/hyperledger/aries-rfcs/blob/main/concepts/0005-didcomm/README.md)
+- [RFC 0046 - Mediators](https://github.com/hyperledger/aries-rfcs/tree/main/concepts/0046-mediators-and-relays)
+
+
+# Steps to Reproduce
 
 ### Setup
 
