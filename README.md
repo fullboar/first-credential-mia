@@ -1,7 +1,7 @@
 
 # TL;DR
 
-When a connection is established between an issuer and holder via a mediator there is a period when the connection is in state `"rfc23_state": "response-sent"` and  `"rfc23_state": "completed",` when a message, such an an offer, can be sent by the issuer to the holder. If this happens the offer is queued in the mediator and no re-delivery attempt is made.
+When a connection is established between an issuer and holder via a mediator there is a period when the connection is in state `"rfc23_state": "response-sent"` and  `"rfc23_state": "completed",` when a message, such an an offer, can be sent by the issuer to the holder. If this happens the offer is queued in the (ACA-py) mediator and no re-delivery attempt is made.
 
 # Description
 
@@ -9,7 +9,7 @@ There appears to be a condition where, after running for some time, an ACA-py me
 
  When a connection is established between an issuer and holder via a mediator there is a period when the connection is in state `"rfc23_state": "response-sent"` and  `"rfc23_state": "completed",` when a message, such an an offer, can be sent by the issuer to the holder. If this happens the offer is queued in the mediator and no re-delivery attempt is made.
 
- This appears to be a race condition where the mediator performance slows just enough (on cloud infrastructure) to allow the above mentiond scenario to serface. It can be reproduced using a local mediator by, as the description notes, sending an offer quickly befor a connection state reaches the "completed" state.
+ This appears to be a race condition where the mediator performance slows just enough (on cloud infrastructure) to allow the above mentiond scenario to surface. It can be reproduced using a local mediator by, as the description notes, sending an offer quickly befor a connection reaches the "completed" state.
 
 ### References
 
