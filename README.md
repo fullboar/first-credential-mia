@@ -31,6 +31,12 @@ In [this](./faber-local-fail.mov) video I use a similar script to the one attach
  2. Start the [ACA-py Faber](https://github.com/hyperledger/aries-cloudagent-python);
  3. Start either the sample script or a fresh install of the BC Wallet.
 
+If you are using the sample script it will run an mediated agent that does approximaly the same process as the Bifold / BC Wallet. Use a similar command with a proper invitaiton URL.
+
+```console
+rm -rf ~/.indy_client/ && ./node_modules/.bin/ts-node test.ts -i https://my.invitation.com?c_i=abc123
+```
+
 ### Trigger the Issue
 
 1. Using a **fresh install** of the BC Wallet scan Faber's invitation QR code;
