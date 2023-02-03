@@ -133,24 +133,30 @@ An ACA-py mediator should atempt delivery of any queued messages when the relate
 ### Q & A
 
 1. How do you know the message is queued in the mediator?
+
 In AFJ the fn `initiateMessagePickup` can be called to trigger the delivery of messages. The outstanding offer will be delivered. 
 
 2. Is this infrastructure (OpenShift, Cloud, Kubernets) related?
+
 This problem exists on two mediators running similar version of ACA-py hosted on different infrastructure by two different companies. It can also be reproduced locally using Docker.
 
 3. Is this specific to a version of ACA-py. 
+
 It can be reproduced locally in Dokcer using ACA-py 0.7.3 and 1.0.0-rc1. The cloud hosted agents both run ACA-py 0.7.x versions.
 
 4. Why do you think its a race condition?
+
 In one test we used an ACA-py 0.7.3 mediator on a cloud platform which had been running for 1 day under light load. The problem was evident. On the same cloud platform an ACA-py mediator running 0.7.4-rc2 which had been running for <10 min. The problem did not present. This leands us to believe that as a mediator is used performance degrades enough for the problem to present.
 
 5. Could this be the issuer rather than the mediator?
+
 Unlikley. The situation can be reproduced using the BC Showcase demo. By using the older mediator mentiond in #4 above the automated showcase demo fails. By using the fresh mediator from #4 above the demo succeeds.
 
 6. What conneciotn protocol is being used?
 V1. 
 
 7. Is this a bug?
+
 Maybe. [RFC 0160](https://github.com/hyperledger/aries-rfcs/blob/main/features/0160-connection-protocol/README.md) does **not** require acknowledgement when a conneciton enters the "completed" state. Its is by convention that a controller should confirm the state before sending a message (offer) over the conneciton. This is a recongized shortcoming that shoudl be addressed in V2.
 
 However, it may be a bug in that an ACA-py mediator does not atempt re-delivery of queued messages if that message comes in before the conneciton is "completed". 
