@@ -132,7 +132,7 @@ An ACA-py mediator should atempt delivery of any queued messages when the relate
 
 ### Q & A
 
-\\1. How do you know the message is queued in the mediator?
+1. How do you know the message is queued in the mediator?
 
 In AFJ the fn `initiateMessagePickup` can be called to trigger the delivery of messages. The outstanding offer will be delivered. 
 
