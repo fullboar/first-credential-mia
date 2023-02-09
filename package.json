@@ -78,6 +78,11 @@
     "@types/indy-sdk": "1.16.9"
   },
   "dependencies": {
-    "@aries-framework/node": "^0.3.3"
+    "@aries-framework/core": "^0.3.3",
+    "@aries-framework/react-hooks": "^0.4.0",
+    "@aries-framework/react-native": "^0.3.2",
+    "@aries-framework/node": "^0.3.3",
+    "react": "18.2.0",
+    "react-native": "0.71.0"
   }
 }
