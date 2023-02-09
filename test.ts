@@ -65,7 +65,7 @@ const parseArgs = () => {
   let invitationUrl: string
   const args = process.argv
   const mediatorIdx = args.indexOf('-m')
-  const inviationIdx = args.indexOf('-ix')
+  const inviationIdx = args.indexOf('-i')
 
   if (isNaN(mediatorIdx) || mediatorIdx === -1) {
     log('No mediator url provided, using default.', Style.BrightCyan)
